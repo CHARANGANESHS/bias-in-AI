@@ -9,8 +9,15 @@ OPEN_API_KEY: str = "" # ! Need to fill this, Refer to the OPENAI docs
 
 folder_path: str = "./data/synthetic_data_generation"
 
-prompt_file_path: str = f"{folder_path}/gender_neutral_prompts.json"
-url_file_path: str = f"{folder_path}/gender_neutral_url.json"
+# prompt_file_path: str = f"{folder_path}/gender_neutral_prompts.json"
+# url_file_path: str = f"{folder_path}/gender_neutral_url.json"
+
+
+prompt_file_path: str = f"{folder_path}/apac_gender_neutral_prompts.json"
+url_file_path: str = f"{folder_path}/apac_gender_neutral_url.json"
+
+# prompt_file_path: str = f"{folder_path}/western_gender_neutral_prompts.json"
+# url_file_path: str = f"{folder_path}/western_gender_neutral_url.json"
 
 
 def get_url(prompt_file_path: str, url_file_path: str):
@@ -42,12 +49,20 @@ def get_url(prompt_file_path: str, url_file_path: str):
     print("JSON file created successfully")
     
 def download_url(folder_path: str):
-    image_folder = "synthetic_images"
+    # image_folder = "synthetic_images/basic_images" # ! for basic images
+    image_folder = "synthetic_images/APAC" # ! for asia pacific images
+    # image_folder = "synthetic_images/WW" # ! for Western world images
+    
+    
     upload_folder = f"{folder_path}/{image_folder}"
     
     Path(upload_folder).mkdir(parents=True, exist_ok=True)
+    # "data/synthetic_data_generation/apac_gender_neutral_url.json"
     
-    url_file_path = f"{folder_path}/gender_neutral_url.json"
+    # url_file_path = f"{folder_path}/gender_neutral_url.json" # ! For gender neutral images
+    url_file_path = f"{folder_path}/apac_gender_neutral_url.json" # ! For gender neutral images from APAC region
+    # url_file_path = f"{folder_path}/western_gender_neutral_url.json" # ! For gender neutral images from WW region
+    
     with open(url_file_path, "r") as f:
         url_data = json.load(f)["data"]
     
