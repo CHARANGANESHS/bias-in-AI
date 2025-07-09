@@ -42,3 +42,10 @@ Conduct experiments on the following datasets:
 - Executive presence and organisational effectiveness (overall effectiveness)
 - Organisation led by Women V/S Organisation led by Men (Board Members)
 - Study Women led organisations
+
+## New Work Plan
+
+- Based on the experiments conducted so far, we can show, how image generation bias cna shape recruiting, talent analytics dashboards, etc
+- An experiment that we need to understand, automated resume scanner (build it based on a large LLM model), and we need to see if it ranks men higher than equally qualified women. And explain why this is happening
+- After finding that the AI image tool under-represents women of colour, we can draft a simple “bias-audit checklist” that HR must tick off before any campaign goes live, and we outline how a labour ministry could make such audits mandatory.
+- What happens if AI sets the salaries?
